@@ -1,5 +1,6 @@
 from typing import Union
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
 import controller
 import schema
@@ -13,6 +14,15 @@ async def lifespan(app: FastAPI):
     # Shutdown (if needed)
 
 app = FastAPI(lifespan=lifespan)
+
+# Configuration CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # En production, spécifiez les domaines autorisés
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.get("/")
 def read_root():
