@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💬 Assistant Diabète - Chat IA RAG</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" fill="currentColor"/>
+                    </svg>
+                    <span class="logo-text">Assistant Diabète</span>
+                </div>
+                <div class="header-info">
+                    <span class="badge">IA Médicale</span>
+                    <span class="status-indicator">
+                        <span class="status-dot"></span>
+                        En ligne
+                    </span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="main-container">
+        <div class="container">
+            <!-- Welcome Card -->
+            <div class="welcome-card" id="welcomeCard">
+                <div class="card-wrapper">
+                    <div class="content-box">
+                        <div class="date-box">
+                            <span class="month">NOV</span>
+                            <span class="date">20</span>
+                        </div>
+                        <h1 class="card-title">Bienvenue sur votre Assistant Diabète</h1>
+                        <p class="card-content">Posez vos questions sur le diabète et obtenez des réponses basées sur des sources médicales officielles</p>
+                    </div>
+                </div>
+                
+                <div class="suggestions-grid">
+                    <div class="parent" data-question="Quels sont les symptômes du diabète ?">
+                        <div class="card">
+                            <div class="content-box">
+                                <div class="date-box">
+                                    <span class="icon">🔍</span>
+                                </div>
+                                <span class="card-title">Symptômes</span>
+                                <p class="card-content">Quels sont les symptômes du diabète ?</p>
+                                <span class="see-more">Poser la question</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="parent" data-question="Comment prévenir le diabète de type 2 ?">
+                        <div class="card">
+                            <div class="content-box">
+                                <div class="date-box">
+                                    <span class="icon">🛡️</span>
+                                </div>
+                                <span class="card-title">Prévention</span>
+                                <p class="card-content">Comment prévenir le diabète de type 2 ?</p>
+                                <span class="see-more">Poser la question</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="parent" data-question="Quels sont les différents types de diabète ?">
+                        <div class="card">
+                            <div class="content-box">
+                                <div class="date-box">
+                                    <span class="icon">📊</span>
+                                </div>
+                                <span class="card-title">Types</span>
+                                <p class="card-content">Quels sont les différents types de diabète ?</p>
+                                <span class="see-more">Poser la question</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="parent" data-question="Quelle alimentation pour un diabétique ?">
+                        <div class="card">
+                            <div class="content-box">
+                                <div class="date-box">
+                                    <span class="icon">🥗</span>
+                                </div>
+                                <span class="card-title">Alimentation</span>
+                                <p class="card-content">Quelle alimentation pour un diabétique ?</p>
+                                <span class="see-more">Poser la question</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat Container -->
+            <div class="chat-container active" id="chatContainer" style="display: none;">
+                <div class="chat-messages" id="chatMessages">
+                    <!-- Messages will be added here dynamically -->
+                </div>
+
+                <!-- Typing Indicator -->
+                <div class="typing-indicator" id="typingIndicator" style="display: none;">
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                    <span>L'assistant analyse votre question...</span>
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="input-area">
+                <div class="input-container">
+                    <button class="clear-btn" id="clearBtn" title="Nouvelle conversation">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 13H5v-2h14v2z" fill="currentColor"/>
+                            <path d="M13 19H5v-2h8v2zM3 5h18v2H3V5z" fill="currentColor"/>
+                        </svg>
+                    </button>
+                    <textarea 
+                        id="userInput" 
+                        class="input-field" 
+                        placeholder="Posez votre question sur le diabète..."
+                        rows="1"
+                    ></textarea>
+                    <button class="send-btn" id="sendBtn">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" fill="currentColor"/>
+                        </svg>
+                        <span>Envoyer</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">⚕️ Informations fournies à titre éducatif uniquement. Consultez un professionnel de santé.</p>
+                <p class="footer-links">
+                    <a href="https://www.santepubliquefrance.fr" target="_blank">Santé Publique France</a> •
+                    <a href="https://www.has-sante.fr" target="_blank">HAS</a> •
+                    <a href="https://www.who.int" target="_blank">OMS</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
