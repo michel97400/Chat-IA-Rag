@@ -1,0 +1,11 @@
+
+trafilatura
+llama-index-core
+llama-index-embeddings-ollama
+llama-index-llms-groq
+python-dotenv
+ragas
+fastapi
+uvicorn
+numpy
+scikit-learn

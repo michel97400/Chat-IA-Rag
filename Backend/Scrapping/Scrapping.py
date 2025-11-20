@@ -88,6 +88,24 @@ if __name__ == "__main__":
         "https://www.un.org/fr/observances/diabetes-day",
         "https://www.paho.org/fr/campagnes/journee-mondiale-du-diabete-2023",
         "https://www.afro.who.int/fr/regional-director/speeches-messages/journee-mondiale-du-diabete-2024",
+
+        # === diabete reunion ===
+        "https://www.lareunion.ars.sante.fr/chiffre-cles-le-diabete-et-les-personnes-diabetiques-la-reunion",
+        "https://la1ere.franceinfo.fr/reunion/grand-format-diabete-la-reunion-toujours-en-premiere-ligne-face-a-une-epidemie-silencieuse-1483652.html",
+        "https://www.chu-reunion.fr/grande-enquete-diabete-prediabete-a-la-reunion/",
+        "https://www.lareunion.ars.sante.fr/journee-mondiale-du-diabete-le-14-novembre-2025-des-premiers-indicateurs-encourageants-poursuivons",
+        "https://www.cnis.fr/enquetes/prevalence-du-diabete-et-du-prediabete-a-la-reunion-etude-de-la-2024/e",
+        "https://reunion.mutualite.fr/dossiers/association-diabete-nutrition-974/",
+        "https://beh.santepubliquefrance.fr/beh/2023/20-21/2023_20-21_3.html",  # Prévalence du diabète à La Réunion, BEH Santé Publique France :contentReference[oaicite:0]{index=0}  
+        "https://www.santepubliquefrance.fr/regions/antilles/documents/article/2023/prevalence-du-diabete-connu-dans-4-departements-et-regions-d-outre-mer-guadeloupe-martinique-guyane-et-la-reunion.-resultats-du-barometre-de-sa",  # Article Santé Publique France sur les DROM :contentReference[oaicite:1]{index=1}  
+        "https://beh.santepubliquefrance.fr/beh/2023/20-21/2023_20-21_4.html",  # Analyse de la prise en charge, inégalités, littératie en santé :contentReference[oaicite:2]{index=2}  
+        "https://beh.santepubliquefrance.fr/beh/2023/20-21/2023_20-21_1.html",  # Informations sur le diagnostic, recours aux soins :contentReference[oaicite:3]{index=3}  
+        "https://www.linfo.re/la-reunion/sante/diabete-a-la-reunion-10-de-la-population-atteinte-soit-le-double-de-la-metropole",  # Article local LINFO.re sur l’épidémie à La Réunion :contentReference[oaicite:4]{index=4}  
+        "https://www.linfo.re/la-reunion/societe/a-la-reunion-2-femmes-sur-10-developpent-un-diabete-pendant-leur-grossesse",  # Article sur le diabète gestationnel à La Réunion :contentReference[oaicite:5]{index=5}  
+        "https://www.santemagazine.fr/actualites/actualites-sante/selon-une-etude-le-diabete-est-2-fois-plus-frequent-dans-les-drom-quen-hexagone-1040576",  # Étude de Santé Magazine sur la prévalence dans les DROM :contentReference[oaicite:6]{index=6}  
+        "https://www.ars.sante.fr/system/files/2023-11/Synth%C3%A8se%20etudes%20diab%C3%A8te_13.11.2023.pdf",  # Synthèse des études diabète par l’ARS Réunion :contentReference[oaicite:7]{index=7}  
+        "https://beh.santepubliquefrance.fr/beh/2022/9-10/2022_9-10_1.html",  # Historique, études antérieures (ex : étude Redia) :contentReference[oaicite:8]{index=8}  
+        "https://beh.santepubliquefrance.fr/beh/2010/42_43/index.htm",  # Données plus anciennes (2000-2009) sur le diabète traité à La Réunion dans les DOM :contentReference[oaicite:9]{index=9}  
     ]
 
     # Métadonnées sur les sources
@@ -139,6 +157,48 @@ if __name__ == "__main__":
             "type": "Expertise médicale",
             "fiabilité": "Très élevée",
             "contenu": "Recommandations professionnelles, données cliniques"
+        },
+
+        "Ars Reunion": {
+            "description": "Agence de Santé Reunion",
+            "type": "Agence de surveillance",
+            "fiabilité": "Très élevée",
+            "contenu": "Recommandations professionnelles, données cliniques, statistique sur la reunion"
+        },
+
+        "Santé Publique France": {
+        "description": "Agence nationale de santé publique responsable de la surveillance épidémiologique et des études de santé en France.",
+        "type": "Données officielles françaises",
+        "fiabilité": "Très élevée",
+        "contenu": "Prévalence, incidence, mortalité, facteurs de risque, caractéristiques socio-démographiques, prise en charge."
+        },
+
+        "BEH (Bulletin Épidémiologique Hebdomadaire)": {
+            "description": "Publication scientifique de Santé Publique France présentant les études épidémiologiques françaises.",
+            "type": "Revue épidémiologique officielle",
+            "fiabilité": "Très élevée",
+            "contenu": "Analyses détaillées sur le diabète à La Réunion, tendances temporelles, comparaisons avec les DROM et la métropole."
+        },
+
+        "ARS La Réunion": {
+            "description": "Agence Régionale de Santé de La Réunion, responsable de la stratégie locale de santé publique.",
+            "type": "Données institutionnelles régionales",
+            "fiabilité": "Très élevée",
+            "contenu": "Programmes régionaux, synthèses d’études, analyses de terrain, prévention, données locales mises à jour."
+        },
+
+        "LINFO.re": {
+            "description": "Média régional réunionnais relayant des informations locales vérifiées.",
+            "type": "Presse locale",
+            "fiabilité": "Bonne (vérification journalistique locale)",
+            "contenu": "Chiffres vulgarisés, interviews d’experts, actualités concernant le diabète à La Réunion."
+        },
+
+        "Santé Magazine": {
+            "description": "Magazine national spécialisé en santé et vulgarisation médicale.",
+            "type": "Média grand public",
+            "fiabilité": "Moyenne à bonne",
+            "contenu": "Synthèses d’études, vulgarisation, articles accessibles destinés au grand public."
         }
     }
     for url in urls:
