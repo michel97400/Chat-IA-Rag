@@ -26,6 +26,13 @@ Chat-IA-Rag/
 │   │   └── groq_rag.py         # Tests RAG en ligne de commande
 │   └── data/
 │       └── scraped_data.json   # Données collectées
+├── Frontend/
+│   ├── index.html              # Interface utilisateur
+│   ├── css/
+│   │   └── style.css           # Styles Neo-brutalism
+│   ├── js/
+│   │   └── app.js              # Logique JavaScript
+│   └── serve.py                # Serveur HTTP Python
 ├── data/                       # Dossier data alternatif
 ├── .env                        # Configuration (API keys)
 ├── requirements.txt            # Dépendances Python
@@ -110,7 +117,28 @@ L'API sera accessible sur : http://localhost:8000
 
 📖 Documentation interactive : http://localhost:8000/docs
 
-### 3. Tester le RAG en ligne de commande (optionnel)
+### 3. Lancer le Frontend
+
+Le frontend dispose d'un serveur Python intégré pour faciliter le développement.
+
+```bash
+cd Frontend
+python serve.py
+```
+
+Le frontend sera accessible sur : http://localhost:8080
+
+**Ou utilisez le chemin absolu :**
+```bash
+python "c:\Users\flavi\OneDrive\Documents\Simplon\Projet\Rag_Diabète\Chat-IA-Rag\Frontend\serve.py"
+```
+
+**Alternative avec Live Server (VS Code) :**
+- Installez l'extension "Live Server" dans VS Code
+- Clic droit sur `Frontend/index.html`
+- Sélectionnez "Open with Live Server"
+
+### 4. Tester le RAG en ligne de commande (optionnel)
 
 ```bash
 cd Backend/Test_Model
@@ -261,6 +289,7 @@ uvicorn main:app --port 8080
 
 ## 🚀 Commandes utiles
 
+### Backend (API)
 ```bash
 # Lancer l'API en mode développement
 cd Backend
@@ -280,6 +309,31 @@ python Scrapping.py
 cd Backend/Test_Model
 python groq_rag.py
 ```
+
+### Frontend
+```bash
+# Lancer le serveur Frontend (port 8080)
+cd Frontend
+python serve.py
+
+# Ou avec chemin absolu
+python "c:\...\Chat-IA-Rag\Frontend\serve.py"
+```
+
+### Utilisation complète
+1. **Terminal 1** : Lancer l'API Backend
+   ```bash
+   cd Backend
+   uvicorn main:app --reload
+   ```
+
+2. **Terminal 2** : Lancer le Frontend
+   ```bash
+   cd Frontend
+   python serve.py
+   ```
+
+3. **Navigateur** : Ouvrir http://localhost:8080
 
 ## 📚 Documentation
 
